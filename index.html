@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zobayda Akter | QA Automation Engineer</title>
   <meta name="description" content="Portfolio of Zobayda Akter: QA automation engineer with experience testing web and mobile applications, REST APIs and payment integrations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefers = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', saved || prefers);
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="lines"></span></div>
 
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="#top"><span class="badge" aria-hidden="true">ZA</span>Zobayda Akter</a>
+      <a class="brand" href="#top"><span class="badge" aria-hidden="true">ZA</span><span>Zobayda Akter</span></a>
       <nav aria-label="Main">
         <ul>
           <li><a href="#about">About</a></li>
@@ -22,99 +33,127 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="tools">
+        <span class="clock" title="Local time"><span class="pin" aria-hidden="true"></span>Dhaka <time id="clock">--:--</time></span>
+        <button class="theme" id="theme" type="button" aria-label="Switch between dark and light theme"><span aria-hidden="true">◐</span></button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="wrap">
-        <p class="eyebrow">QA Automation Engineer</p>
-        <h1>Quality engineering for web and mobile applications.</h1>
-        <p class="lead">Over two years of testing web and mobile applications, REST APIs and payment integrations.</p>
-        <p class="actions">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn ghost" href="https://github.com/zobaydadev" target="_blank" rel="noopener">GitHub profile</a>
-        </p>
-        <ul class="stats" aria-label="At a glance">
-          <li><strong>2+</strong><span>years in QA</span></li>
-          <li><strong>6</strong><span>projects on GitHub</span></li>
-          <li><strong>25</strong><span>automated tests in TestTrack CI</span></li>
-        </ul>
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">QA Automation Engineer</p>
+          <h1>Quality engineering for <span class="grad">web &amp; mobile</span> applications.</h1>
+          <p class="lead">Over two years of testing web and mobile applications, REST APIs and payment integrations, with automation that runs in CI.</p>
+          <p class="actions">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn ghost" href="https://github.com/zobaydadev" target="_blank" rel="noopener">GitHub profile</a>
+          </p>
+          <ul class="stats" aria-label="At a glance">
+            <li><strong>2+</strong><span>years in QA</span></li>
+            <li><strong>6</strong><span>projects on GitHub</span></li>
+            <li><strong>25</strong><span>automated tests in TestTrack CI</span></li>
+          </ul>
+        </div>
+
+        <figure class="term reveal" aria-label="Example test run from the TestTrack project">
+          <div class="term-bar"><i></i><i></i><i></i><span>testtrack · npm test</span></div>
+          <pre><code><span class="dim">$ npm test</span>
+<span class="ok">✓</span> registers, rejects duplicates and logs in
+<span class="ok">✓</span> rejects a wrong password with the same message as an unknown email
+<span class="ok">✓</span> records a run and returns it with results
+<span class="ok">✓</span> keeps projects private between users
+<span class="dim">…</span>
+<span class="pass">Tests  18 passed (18)</span>
+<span class="pass">Browser tests  7 passed (7)</span><span class="cursor"></span></code></pre>
+          <figcaption>Test names taken from the TestTrack repo; list shortened.</figcaption>
+        </figure>
       </div>
     </section>
 
     <section id="about">
-      <div class="wrap">
-        <h2>About me</h2>
-        <p>I am a QA Automation Engineer with over two years of experience in web and mobile application testing, test automation and REST APIs. I hold a B.Sc. in Computer Science and Engineering from Daffodil International University, where I studied Web Engineering, Databases and Software Engineering.</p>
-        <p>I have tested hospital management systems, payment flows and a Salesforce-based platform, with a focus on data flow, access control and integration.</p>
+      <div class="wrap about">
+        <h2 class="reveal">About me</h2>
+        <div class="about-grid">
+          <p class="big reveal">I am a QA Automation Engineer with over two years of experience in web and mobile application testing, test automation and REST APIs.</p>
+          <div class="reveal">
+            <p>I hold a B.Sc. in Computer Science and Engineering from Daffodil International University, where I studied Web Engineering, Databases and Software Engineering.</p>
+            <p>I have tested hospital management systems, payment flows and a Salesforce-based platform, with a focus on data flow, access control and integration.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <h2>Projects</h2>
+        <h2 class="reveal">Projects</h2>
 
-        <article class="card featured">
+        <article class="card featured reveal">
           <div class="shots">
             <img src="testtrack-dashboard.png" alt="TestTrack dashboard showing the overall pass rate and results per test run" loading="lazy">
             <img src="testtrack-testcases.png" alt="TestTrack test cases page listing cases with priority" loading="lazy">
           </div>
           <div class="body">
+            <p class="num">01 · Featured</p>
             <h3>TestTrack: Test Management Dashboard</h3>
             <p>A full-stack web application to organise test cases, record test runs and see pass-rate trends. Projects are private to their owner, and each run is saved in a single database transaction.</p>
-            <ul class="tags">
-              <li>React</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li>JWT</li><li>OpenAPI</li><li>Playwright</li><li>Docker</li>
-            </ul>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li><li>JWT</li><li>OpenAPI</li><li>Playwright</li><li>Docker</li></ul>
             <p>18 API tests and 7 browser tests run in GitHub Actions on every push.</p>
-            <p class="links"><a href="https://github.com/zobaydadev/TestTrack-QA-Dashboard" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="links"><a href="https://github.com/zobaydadev/TestTrack-QA-Dashboard" target="_blank" rel="noopener">Source on GitHub →</a></p>
           </div>
         </article>
 
-        <div class="grid">
-          <article class="card">
+        <div class="cards">
+          <article class="card reveal">
             <div class="body">
+              <p class="num">02 · Final year project</p>
               <h3>Public Document Record System</h3>
-              <p class="meta">Final year project, team of two</p>
+              <p class="meta">Team of two</p>
               <p>A web application that publishes public documents with blockchain-based integrity. I designed the front end and tested the interface, the REST API and the publishing flow end to end.</p>
               <ul class="tags"><li>React</li><li>TypeScript</li><li>Express</li><li>Solidity</li><li>Firebase</li></ul>
-              <p class="links"><a href="https://doc-volt.web.app/" target="_blank" rel="noopener">Live site</a></p>
+              <p class="links"><a href="https://doc-volt.web.app/" target="_blank" rel="noopener">Live site →</a></p>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <div class="body">
+              <p class="num">03</p>
               <h3>BookingHub API Test Suite</h3>
               <p>REST API tests for a booking service, with a nightly run in CI and a Docker image.</p>
               <ul class="tags"><li>Java</li><li>Rest Assured</li><li>TestNG</li><li>Docker</li></ul>
-              <p class="links"><a href="https://github.com/zobaydadev/BookingHub-API-Test-Suite" target="_blank" rel="noopener">Source on GitHub</a></p>
+              <p class="links"><a href="https://github.com/zobaydadev/BookingHub-API-Test-Suite" target="_blank" rel="noopener">Source on GitHub →</a></p>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <div class="body">
+              <p class="num">04</p>
               <h3>ShopFlow E2E Tests</h3>
               <p>End-to-end UI and API tests for a shop flow, with a nightly run in CI and a Docker image.</p>
               <ul class="tags"><li>Playwright</li><li>TypeScript</li><li>Docker</li></ul>
-              <p class="links"><a href="https://github.com/zobaydadev/ShopFlow-E2E-Playwright-Tests" target="_blank" rel="noopener">Source on GitHub</a></p>
+              <p class="links"><a href="https://github.com/zobaydadev/ShopFlow-E2E-Playwright-Tests" target="_blank" rel="noopener">Source on GitHub →</a></p>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <div class="body">
+              <p class="num">05</p>
               <h3>UI-API Test Automation Framework</h3>
               <p>A hybrid framework that combines browser and API tests with the Page Object Model and HTML reports.</p>
               <ul class="tags"><li>Java</li><li>Selenium</li><li>TestNG</li><li>Rest Assured</li></ul>
-              <p class="links"><a href="https://github.com/zobaydadev/UI-API-Test-Automation-Framework" target="_blank" rel="noopener">Source on GitHub</a></p>
+              <p class="links"><a href="https://github.com/zobaydadev/UI-API-Test-Automation-Framework" target="_blank" rel="noopener">Source on GitHub →</a></p>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <div class="body">
+              <p class="num">06</p>
               <h3>LoadLens k6 Performance Suite</h3>
               <p>Smoke, load and spike tests with pass/fail thresholds.</p>
               <ul class="tags"><li>k6</li><li>JavaScript</li><li>Docker</li></ul>
-              <p class="links"><a href="https://github.com/zobaydadev/LoadLens-K6-Performance-Suite" target="_blank" rel="noopener">Source on GitHub</a></p>
+              <p class="links"><a href="https://github.com/zobaydadev/LoadLens-K6-Performance-Suite" target="_blank" rel="noopener">Source on GitHub →</a></p>
             </div>
           </article>
         </div>
@@ -123,32 +162,32 @@
 
     <section id="skills">
       <div class="wrap">
-        <h2>Skills</h2>
-        <dl class="skills">
-          <div><dt>Frontend</dt><dd><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">React</span></dd></div>
-          <div><dt>Backend</dt><dd><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST APIs</span><span class="chip">JWT</span><span class="chip">OpenAPI</span></dd></div>
-          <div><dt>Databases</dt><dd><span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">Oracle</span><span class="chip">MySQL</span></dd></div>
-          <div><dt>Programming</dt><dd><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span></dd></div>
-          <div><dt>Testing &amp; Tools</dt><dd><span class="chip">Playwright</span><span class="chip">Selenium</span><span class="chip">Rest Assured</span><span class="chip">Appium</span><span class="chip">Postman</span><span class="chip">k6</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Jira</span></dd></div>
-        </dl>
+        <h2 class="reveal">Skills</h2>
+        <div class="skill-grid">
+          <div class="skill reveal"><h3>Frontend</h3><p><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">React</span></p></div>
+          <div class="skill reveal"><h3>Backend</h3><p><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST APIs</span><span class="chip">JWT</span><span class="chip">OpenAPI</span></p></div>
+          <div class="skill reveal"><h3>Databases</h3><p><span class="chip">SQL</span><span class="chip">PostgreSQL</span><span class="chip">Oracle</span><span class="chip">MySQL</span></p></div>
+          <div class="skill reveal"><h3>Programming</h3><p><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span></p></div>
+          <div class="skill wide reveal"><h3>Testing &amp; Tools</h3><p><span class="chip">Playwright</span><span class="chip">Selenium</span><span class="chip">Rest Assured</span><span class="chip">Appium</span><span class="chip">Postman</span><span class="chip">k6</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">Jira</span></p></div>
+        </div>
       </div>
     </section>
 
     <section id="experience">
       <div class="wrap">
-        <h2>Experience and education</h2>
+        <h2 class="reveal">Experience and education</h2>
         <ol class="timeline">
-          <li>
+          <li class="reveal">
             <p class="when">08/2026 - present</p>
             <h3>QA Automation Engineer, Twinforce Solutions Limited</h3>
             <p>Testing the web and mobile components of a Salesforce-based cloud platform, checking client-server data flow and permissions, and automating mobile regression flows with Appium and JavaScript.</p>
           </li>
-          <li>
+          <li class="reveal">
             <p class="when">03/2024 - 08/2026</p>
             <h3>Software Quality Assurance Engineer, Nextgen Innovation Ltd</h3>
             <p>Tested web and mobile hospital management (ERP) applications, online payments and REST APIs, and ran functional, regression, integration and UAT cycles in Agile sprints.</p>
           </li>
-          <li>
+          <li class="reveal">
             <p class="when">2018 - 2022</p>
             <h3>B.Sc. in Computer Science and Engineering, Daffodil International University</h3>
             <p>Coursework includes Web Engineering, Database Management Systems, Software Engineering, Computer Networks and Operating Systems.</p>
@@ -159,13 +198,15 @@
 
     <section id="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>I am happy to share more about my work.</p>
-        <ul class="contact">
-          <li><a href="mailto:zobayda.akter18@gmail.com">zobayda.akter18@gmail.com</a></li>
-          <li><a href="https://github.com/zobaydadev" target="_blank" rel="noopener">github.com/zobaydadev</a></li>
-          <li><a href="https://www.linkedin.com/in/zobayda18" target="_blank" rel="noopener">linkedin.com/in/zobayda18</a></li>
-        </ul>
+        <div class="cta reveal">
+          <h2>Let's talk</h2>
+          <p>I am happy to share more about my work.</p>
+          <p class="mail"><a href="mailto:zobayda.akter18@gmail.com">zobayda.akter18@gmail.com</a></p>
+          <ul class="contact">
+            <li><a href="https://github.com/zobaydadev" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/zobayda18" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
@@ -173,5 +214,35 @@
   <footer>
     <div class="wrap"><p>&copy; 2026 Zobayda Akter</p></div>
   </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('theme');
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+
+      var clock = document.getElementById('clock');
+      function tick() {
+        try {
+          clock.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dhaka' }).format(new Date());
+        } catch (e) { clock.textContent = ''; }
+      }
+      tick(); setInterval(tick, 30000);
+
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        items.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
