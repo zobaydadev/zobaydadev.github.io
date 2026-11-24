@@ -66,6 +66,9 @@ nav ul { display: flex; flex-wrap: wrap; gap: .25rem 1.4rem; list-style: none; m
 nav a { color: var(--muted); text-decoration: none; font-size: .95rem; font-weight: 500; padding: .2rem 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s; }
 nav a:hover { color: var(--ink); border-bottom-color: var(--a); }
 .tools { display: flex; align-items: center; gap: .6rem; }
+.social { display: flex; gap: .45rem; }
+.social a { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .8rem; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); text-decoration: none; font-size: .86rem; font-weight: 600; transition: transform .15s, border-color .15s, color .15s; }
+.social a:hover { transform: translateY(-2px); border-color: var(--a); color: var(--a); }
 .clock { display: inline-flex; align-items: center; gap: .45rem; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .8rem; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: .25rem .75rem; }
 .pin { width: .5rem; height: .5rem; border-radius: 50%; background: var(--a); box-shadow: 0 0 0 3px color-mix(in srgb, var(--a) 28%, transparent); animation: pulse 2.4s infinite; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 6px transparent; } }
@@ -178,6 +181,8 @@ footer p { margin: 0 auto; }
   section { padding: 3.4rem 0; }
   .hero { padding: 3rem 0 2.5rem; }
   .clock { display: none; }
+  .social a span { display: none; }
+  .social a { padding: .45rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
